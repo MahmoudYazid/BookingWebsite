@@ -9,7 +9,7 @@ export default function SignUp() {
     const typeref = useRef("")
 
     const signupFunc = () => {
-        const response = axios.get('http://localhost:3000/api/signup', {
+        const response = axios.get('https://booking-website-iota.vercel.app/api/signup', {
             headers: {
                 name: usernameref.current.value,
                 password: passwordref.current.value,

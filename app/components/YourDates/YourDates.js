@@ -5,7 +5,7 @@ import { deleteCookie, getCookie } from 'cookies-next'
 export default function YourDates() {
     const [FetchedData_,SetFetchedData] = useState([])
     const fetchDate =()=>{
-       const res =  axios.get('http://localhost:3000/api/GetAllMyAppointment',{
+       const res =  axios.get('https://booking-website-iota.vercel.app/api/GetAllMyAppointment',{
         headers:{
                patientname_: String(JSON.parse(getCookie('idcard'))[0]['name'])
         }
@@ -21,7 +21,7 @@ export default function YourDates() {
 
   const DelAppoint = (AppId) => {
     console.log(AppId)
-    const res = axios.get('http://localhost:3000/api/DelContract', {
+    const res = axios.get('https://booking-website-iota.vercel.app/api/DelContract', {
       headers: {
         contractid_:AppId
       }

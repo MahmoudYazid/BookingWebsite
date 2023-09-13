@@ -6,7 +6,7 @@ export default function Clients() {
   const [FetchedData_, SetFetchedData] = useState([])
 
   const fetchDate = () => {
-    const res = axios.get('http://localhost:3000/api/GetAllMyClients', {
+    const res = axios.get('https://booking-website-iota.vercel.app/api/GetAllMyClients', {
       headers: {
         doctorname_: String(JSON.parse(getCookie('idcard'))[0]['name'])
       }
@@ -21,7 +21,7 @@ export default function Clients() {
   }
   const DelAppoint = (AppId) => {
     console.log(AppId)
-    const res = axios.get('http://localhost:3000/api/DelContract', {
+    const res = axios.get('https://booking-website-iota.vercel.app/api/DelContract', {
       headers: {
         contractid_: AppId
       }

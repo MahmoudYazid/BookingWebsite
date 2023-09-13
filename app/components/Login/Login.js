@@ -19,7 +19,7 @@ export default function Login() {
     const passwordref = useRef()
 
     const loginFunc = () => {
-        const response =  axios.get('http://localhost:3000/api/login',{
+        const response = axios.get('https://booking-website-iota.vercel.app/api/login',{
             headers:{
                 name: usernameref.current.value,
                 password: passwordref.current.value,

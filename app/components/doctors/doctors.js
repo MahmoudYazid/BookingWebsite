@@ -6,7 +6,7 @@ export default function doctors() {
     const [DateState, SetDateState] = useState('')
     const [StateOfCooosenDateState, SetStateOfCooosenDateState] = useState('')
     const fetchDoctors=()=>{
-        axios.get('http://localhost:3000/api/GetAllTheDoctors').then((response)=>{
+        axios.get('https://booking-website-iota.vercel.app/api/GetAllTheDoctors').then((response)=>{
             
             SetDoctorsState(response.data.res)
 
@@ -24,7 +24,7 @@ export default function doctors() {
             SetStateOfCooosenDateState('choose date')
             return 0
         }
-        await axios.get('http://localhost:3000/api/MakeNextDate',{
+        await axios.get('https://booking-website-iota.vercel.app/api/MakeNextDate',{
             headers: {
                 "Accept": "*/*",
                 "doctorname_": DoctorName_,
