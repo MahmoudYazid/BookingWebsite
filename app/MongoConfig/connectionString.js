@@ -1,0 +1,1 @@
+export const conectionStr ='mongodb+srv://abuelyazidsoftware:mnimai21yo@clone.7pm38gz.mongodb.net/booking?retryWrites=true&w=majority';
